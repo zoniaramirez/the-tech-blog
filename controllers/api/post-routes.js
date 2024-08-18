@@ -4,7 +4,7 @@ const sequelize = require("../../config/connection");
 const withAuth = require("../../utils/auth");
 
 // find all content and post it on page
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
       attributes: ["id", "title", "content", "created_at"],
@@ -32,7 +32,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 // GET by id  
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const postData = await Post.findOne({
       where: {

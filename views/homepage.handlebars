@@ -1,5 +1,9 @@
 <article class="post">
+    {{#if loggedIn}}
     {{#each posts as |post| }}
-        {{> homepage-detail post}}
+    {{> homepage-detail post}}
     {{/each}}
+    {{else}}
+    <h2>Please <a href="/login" class="text-primary">log in</a> to view the posts.</h2>
+    {{/if}}
 </article>

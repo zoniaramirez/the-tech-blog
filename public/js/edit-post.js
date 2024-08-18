@@ -20,7 +20,7 @@ async function editFormHandler(event) {
           content,
         }),
         headers: {
-          "Content-Type": "application/json",
+          "Accept": "text/html",
         },
       });
   // If successful, redirect the browser to the dashboard page
