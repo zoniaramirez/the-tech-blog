@@ -29,7 +29,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// POST route create a comment and save its data when user loggedin
+// POST route create a comment and save its data when user loggedIn
 router.post("/", withAuth, async (req, res) => {
   if (req.session) {
     try {
@@ -47,7 +47,7 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // PUT route update a comment for loggedIn user
-router.put("/post/:id", withAuth, async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.update(
       {
@@ -71,7 +71,7 @@ router.put("/post/:id", withAuth, async (req, res) => {
 });
 
 // DELETE route delete a comment with the comment id
-router.delete("/post/:id", withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.destroy({
       where: {

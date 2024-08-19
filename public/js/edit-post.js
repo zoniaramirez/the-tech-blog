@@ -20,7 +20,7 @@ async function editFormHandler(event) {
           content,
         }),
         headers: {
-          "Accept": "text/html",
+          "Content-Type": "application/json",
         },
       });
   // If successful, redirect the browser to the dashboard page
@@ -32,4 +32,4 @@ async function editFormHandler(event) {
     }
   }
   
-  document.querySelector(".edit-post-form").addEventListener("submit", editFormHandler);
+  document.querySelector("#edit-post-form").addEventListener("submit", editFormHandler);

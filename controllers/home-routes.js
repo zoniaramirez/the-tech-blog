@@ -7,7 +7,12 @@ router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
       attributes: ["id", "title", "content", "created_at"],
+      order: [["created_at", "DESC"]],
       include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
         {
           model: Comment,
           attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
@@ -15,10 +20,6 @@ router.get("/", async (req, res) => {
             model: User,
             attributes: ["username"],
           },
-        },
-        {
-          model: User,
-          attributes: ["username"],
         },
       ],
     });
@@ -45,7 +46,7 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-//GET post by id when a user clicks a post on homepage, view the blog content
+// GET post by id when a user clicks a post on homepage, view the blog content
 router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findOne({
@@ -74,8 +75,8 @@ router.get("/post/:id", async (req, res) => {
       return;
     }
 
-    const posts = postData.map((post) => post.get({ plain: true }));
-    res.render("homepage", { posts, loggedIn: req.session.loggedIn });
+    const post = postData.get({ plain: true });
+    res.render("single-post", { post, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
