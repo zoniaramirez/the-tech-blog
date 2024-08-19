@@ -1,6 +1,8 @@
 {{> homepage-detail post}}
 
-{{> comment post.comments}}
+<div class="comments-section">
+  {{> comment post.comments}}
+</div>
 
 {{#if loggedIn}}
 <div class="card">
