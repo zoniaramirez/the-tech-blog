@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const commentText = commentElement.querySelector("p").innerText;
 
       commentElement.innerHTML = `
-        <textarea class="edit-comment-textarea">${commentText}</textarea>
-        <button class="save-comment-btn">Save</button>
-        <button class="cancel-edit-btn">Cancel</button>
+        <textarea class="edit-comment-textarea" style="width: 100%; height: 150px;">${commentText}</textarea>
+        <button class="btn btn-primary mt-2 save-comment-btn">Save</button>
+        <button class="btn btn-primary mt-2 cancel-edit-btn">Cancel</button>
       `;
 
       commentElement.querySelector(".save-comment-btn").addEventListener("click", async () => {
