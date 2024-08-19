@@ -1,15 +1,14 @@
 // function to add comment
-async function commentFormHandler(event) {
+document.addEventListener("DOMContentLoaded", () => {
+  async function commentFormHandler(event) {
     event.preventDefault();
-  
+
     const comment_text = document
-      .querySelector('input[name="comment-body"]')
+      .querySelector('textarea[name="comment-body"]')
       .value.trim();
-  
-    const post_id = window.location.toString().split("/")[
-      window.location.toString().split("/").length - 1
-    ];
-  
+
+    const post_id = window.location.toString().split("/").pop();
+
     if (comment_text) {
       const response = await fetch("/api/comments", {
         method: "POST",
@@ -21,14 +20,16 @@ async function commentFormHandler(event) {
           "Content-Type": "application/json",
         },
       });
-  
+
       if (response.ok) {
         document.location.reload();
       } else {
         alert(response.statusText);
-        document.querySelector("#comment-form").style.display = "block";
       }
     }
   }
-  
-  document.querySelector(".comment-form").addEventListener("submit", commentFormHandler);
+
+  document
+    .querySelector("#comment-form")
+    .addEventListener("submit", commentFormHandler);
+});

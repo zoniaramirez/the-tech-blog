@@ -1,17 +1,17 @@
 {{> homepage-detail post}}
 
+{{> comment post.comments}}
+
 {{#if loggedIn}}
 <div class="card">
     <h3 class="card-header"></h3>
      <form class="card-body comment-form" id="comment-form">
         <label for="comment" class="form-label">Comment</label>
-        <textarea id="comment" name="comment-body" class="form-control w-100" aria-label="With textarea" style="height: 200px"></textarea>
+        <textarea id="comment" name="comment-body" class="form-control w-100" aria-label="With textarea" style="height: 150px"></textarea>
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
     </form>
 </div>
 {{/if}}
-
-{{> comment post.comments}}
 
 {{#if loggedIn}}
 <script src="/js/comment.js"></script>
