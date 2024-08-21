@@ -6,10 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.querySelector('textarea[name="content"]').value.trim();
     const id = window.location.toString().split("/").pop();
 
-    console.log("Title:", title);
-    console.log("Content:", content);
-    console.log("ID:", id);
-
     if (title && content) {
       try {
         const response = await fetch(`/api/posts/${id}`, {
@@ -40,6 +36,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelector("#edit-post-form").addEventListener("submit", editFormHandler);
-
-  console.log("Event listener attached to #edit-post-form");
 });
