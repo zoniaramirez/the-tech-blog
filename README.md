@@ -44,6 +44,6 @@ npm start
 
 ## Links
 
-[Render Live URL]()
+[Render Live URL](https://the-tech-blog-nml3.onrender.com)
 
-[GitHub Repo]()
+[GitHub Repo](https://github.com/zoniaramirez/the-tech-blog)
