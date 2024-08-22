@@ -4,10 +4,9 @@
 - [Description](#description)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Start](#start)
+- [Screenshot](#screenshot)
+- [Links](#links)
 
 ## Description
 The Tech Blog is a platform where users can share and discuss the latest trends and technologies in the tech industry. It allows users to create, edit, and delete posts, as well as comment on posts made by others.
@@ -15,49 +14,36 @@ The Tech Blog is a platform where users can share and discuss the latest trends 
 ## Features
 - User authentication and authorization
 - Create, edit, and delete blog posts
-- Comment on blog posts
+- Create, edit, and delete comments on blog posts
 - Responsive design
 - RESTful API
 
 ## Installation
-To install and run this project locally, follow these steps:
+ ```
+npm install
+  ```
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/your-username/the-tech-blog.git
-    ```
+## Start
+ ```
+npm start 
+  ```
+## Screenshot
+![alttext](./assets/The-Tech-Blog.SignUp.png)
 
-2. Navigate to the project directory:
-    ```sh
-    cd the-tech-blog
-    ```
+![alttext](./assets/The-Tech-Blog.LogIn.png)
 
-3. Install the dependencies:
-    ```sh
-    npm install
-    ```
+![alttext](./assets/The-Tech-Blog.Home.png)
 
-4. Set up the environment variables:
-    Create a `.env` file in the root directory and add the following:
-    ```env
-    DB_HOST=your_database_host
-    DB_USER=your_database_user
-    DB_PASS=your_database_password
-    DB_NAME=your_database_name
-    ```
+![alttext](./assets/The-Tech-Blog.Comments.png)
 
-5. Run the application:
-    ```sh
-    npm start
-    ```
+![alttext](./assets/The-Tech-Blog.Dashboard.png)
 
-## Usage
-Once the application is running, you can access it at `http://localhost:3000`. Register for an account or log in with your existing credentials to start creating and interacting with blog posts.
+![alttext](./assets/The-Tech-Blog.AddPost.png)
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+![alttext](./assets/The-Tech-Blog.EditPost.png)
 
-## Contact
-For any questions or feedback, please contact:
-- Your Name: [your-email@example.com](mailto:your-email@example.com)
-- GitHub: [your-username](https://github.com/your-username)
+## Links
+
+[Render Live URL]()
+
+[GitHub Repo]()
