@@ -25,7 +25,7 @@ npm install
 
 ## Start
  ```
-npm start 
+node server.js 
   ```
 ## Screenshot
 ![alttext](./assets/The-Tech-Blog.SignUp.png)
